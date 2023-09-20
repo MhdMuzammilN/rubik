@@ -167,9 +167,9 @@ return (
         </li>
        
         <li>
-          <a className="text-sm text-gray-400 hover:text-gray-500" href="#">
+          <Link className="text-sm text-gray-400 hover:text-gray-500" to="/contact">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       <a
