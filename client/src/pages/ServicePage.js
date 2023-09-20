@@ -1,4 +1,4 @@
-import {useState } from "react";
+import { useState } from "react";
 
 const ServicePage = () => {
   let brands = [
@@ -70,35 +70,29 @@ const ServicePage = () => {
   ];
   products = products.sort();
 
-  let ProductsUpper = products.map(
-    (product) => {
+  let ProductsUpper = products.map((product) => {
     return product.toUpperCase();
   });
   //console.log(ProductsUpper)
 
-  const [customer,setCustomer] = useState('') 
-  const [phone,setPhone] = useState('')
-  const [brand,setBrand] = useState('Pick your Brand')
-  const [product,setProduct] = useState('Pick your Product')
-  
-  const Submit = (e)=>{
-  
-  console.log(customer)
-  console.log(phone)
-  console.log(brand)
-  console.log(product)
-   //snd api should be written here4
+  const [customer, setCustomer] = useState("");
+  const [phone, setPhone] = useState("");
+  const [brand, setBrand] = useState("Pick your Brand");
+  const [product, setProduct] = useState("Pick your Product");
 
+  const Submit = (e) => {
+    console.log(customer);
+    console.log(phone);
+    console.log(brand);
+    console.log(product);
+    //snd api should be written here4
 
-  //clearing everything from ui
-    setCustomer('')
-    setPhone('')
-    setBrand('Pick your Brand')
-    setProduct('Pick your Product')  
-    
-    
-  }
-
+    //clearing everything from ui
+    setCustomer("");
+    setPhone("");
+    setBrand("Pick your Brand");
+    setProduct("Pick your Product");
+  };
 
   return (
     <div className="flex bg-[#edf2f4] m-5 md:flex-row justify-around max-sm:flex-col p-3 rounded-lg">
@@ -121,7 +115,9 @@ const ServicePage = () => {
             type="text"
             name="cname"
             value={customer}
-            onChange={(e)=>{setCustomer(e.target.value)}}
+            onChange={(e) => {
+              setCustomer(e.target.value);
+            }}
           />
 
           <label for="cname" className="pt-3">
@@ -133,7 +129,9 @@ const ServicePage = () => {
             type="number"
             name="cname"
             value={phone}
-            onChange={(e)=>{setPhone(e.target.value)}}
+            onChange={(e) => {
+              setPhone(e.target.value);
+            }}
           />
 
           <label for="cname" className="pt-3">
@@ -144,7 +142,9 @@ const ServicePage = () => {
             className="focus:bg-[#d9d9d9] rounded-sm border-[#2b2d42] ring-1 ring-blue-500"
             name="brand"
             id="brand"
-            onChange={(e)=>{setBrand(e.target.value)}}
+            onChange={(e) => {
+              setBrand(e.target.value);
+            }}
             value={brand}
           >
             <option value="">{brand}</option>
@@ -161,7 +161,9 @@ const ServicePage = () => {
             className="focus:bg-[#d9d9d9] rounded-sm border-[#2b2d42] ring-1 ring-blue-500"
             name="product"
             id="product"
-            onChange={(e)=>{setProduct(e.target.value)}}
+            onChange={(e) => {
+              setProduct(e.target.value);
+            }}
             value={product}
           >
             <option value="">{product}</option>
@@ -171,12 +173,13 @@ const ServicePage = () => {
           </select>
 
           <div className="flex items-center justify-center pt-4 ">
-          <button className="bg-violet-600 hover:bg-[#06d6a0] rounded-md border-md flex items-center justify-center w-40 h-10" 
-          onClick={(e)=>Submit(e)}>Submit</button>
-
+            <button
+              className="bg-violet-600 hover:bg-[#06d6a0] rounded-md border-md flex items-center justify-center w-40 h-10"
+              onClick={(e) => Submit(e)}
+            >
+              Submit
+            </button>
           </div>
-          
-          
         </div>
       </div>
     </div>

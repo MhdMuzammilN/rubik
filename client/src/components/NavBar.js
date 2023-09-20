@@ -10,7 +10,7 @@ const NavBar = () => {
 
       if (menu.length) {
         for (let j = 0; j < menu.length; j++) {
-          menu[j].classNameList.toggle('hidden');
+          menu[j].classList.toggle('hidden');
         }
       }
     };
@@ -20,7 +20,7 @@ const NavBar = () => {
 
       if (menu.length) {
         for (let j = 0; j < menu.length; j++) {
-          menu[j].classNameList.toggle('hidden');
+          menu[j].classList.toggle('hidden');
         }
       }
     };
@@ -30,7 +30,7 @@ const NavBar = () => {
 
       if (menu.length) {
         for (let j = 0; j < menu.length; j++) {
-          menu[j].classNameList.toggle('hidden');
+          menu[j].classList.toggle('hidden');
         }
       }
     };
@@ -100,9 +100,11 @@ return (
       </div>
       <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
         <li>
-          <a className="text-sm text-gray-400 hover:text-gray-500" href="#">
+          <Link className="text-sm text-gray-400 hover:text-gray-500"
+          to="/"
+          >
             Home
-          </a>
+          </Link>
         </li>
         <li className="text-gray-300">
           <svg
@@ -250,7 +252,6 @@ return (
             </li>
           </ul>
         </div>
-       
       </nav>
     </div>
   </body>
