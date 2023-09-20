@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ServicePage = () => {
   let brands = [
@@ -78,23 +78,33 @@ const ServicePage = () => {
 
   const [customer,setCustomer] = useState('') 
   const [phone,setPhone] = useState('')
-  const [brand,setBrand] = useState(null)
-  const [product,setProduct] = useState(null)
+  const [brand,setBrand] = useState('Pick your Brand')
+  const [product,setProduct] = useState('Pick your Product')
+  
+  const Submit = (e)=>{
+  
   console.log(customer)
   console.log(phone)
   console.log(brand)
   console.log(product)
-  const Submit = (e)=>{
+   //snd api should be written here4
+
+
+  //clearing everything from ui
+    setCustomer('')
+    setPhone('')
+    setBrand('Pick your Brand')
+    setProduct('Pick your Product')  
     
     
-  
   }
+
 
   return (
     <div className="flex bg-[#edf2f4] m-5 md:flex-row justify-around max-sm:flex-col p-3 rounded-lg">
-      <div className="relative">
-        <div className="md:text-lg sm:max:text-sm sm:max:text-left inset-0">
-          We provide top-notch service for quality electronics devices...{" "}
+      <div className="flex items-center justify-center">
+        <div className="md:text-lg sm:max:text-sm sm:max:text-left inset-0 ">
+          We provide top-notch service for quality electronics devices...
         </div>
         {/* <div className="md:text-lg sm:max:text-sm sm:max:text-left" >We provide top-notch service for quality electronics devices... </div> */}
       </div>
@@ -135,8 +145,9 @@ const ServicePage = () => {
             name="brand"
             id="brand"
             onChange={(e)=>{setBrand(e.target.value)}}
+            value={brand}
           >
-            <option value="">Pick your brand</option>
+            <option value="">{brand}</option>
             {brands.map((brand) => (
               <option value={brand}>{brand}</option>
             ))}
@@ -148,11 +159,12 @@ const ServicePage = () => {
           <br />
           <select
             className="focus:bg-[#d9d9d9] rounded-sm border-[#2b2d42] ring-1 ring-blue-500"
-            name="produtc"
+            name="product"
             id="product"
             onChange={(e)=>{setProduct(e.target.value)}}
+            value={product}
           >
-            <option value="">Pick your Product</option>
+            <option value="">{product}</option>
             {ProductsUpper.map((product) => (
               <option value={product}>{product}</option>
             ))}
@@ -160,7 +172,7 @@ const ServicePage = () => {
 
           <div className="flex items-center justify-center pt-4 ">
           <button className="bg-violet-600 hover:bg-[#06d6a0] rounded-md border-md flex items-center justify-center w-40 h-10" 
-          onClick={Submit()}>Submit</button>
+          onClick={(e)=>Submit(e)}>Submit</button>
 
           </div>
           
