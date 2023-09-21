@@ -49,6 +49,7 @@ const ServicePage = () => {
     "USHA",
     "VGUARD",
     "BUTTERFLY",
+    "others"
   ]; //new brands can be added
 
   brands = brands.sort();
@@ -67,6 +68,7 @@ const ServicePage = () => {
     "dvd player",
     "microwave oven",
     "air conditioner",
+    "others"
   ];
   products = products.sort();
 

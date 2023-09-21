@@ -7,23 +7,7 @@ import homeelectronics from "../assets/homeelectronics.jpg"
 const HomePage = () => {
   return (
     <div>
-      {/* <Carousel className="rounded-xl" transition={{ duration: 1 }}>
-        <img
-          src={e1}
-          alt="image 1"
-          className="h-full w-full object-cover"
-        />
-        <img
-          src={e2}
-          alt="image 2"
-          className="h-full w-full object-cover"
-        />
-        <img
-          src={e3}
-          alt="image 3"
-          className="h-full w-full object-cover"
-        />
-      </Carousel> */}
+     
 
 
 <section className="bg-white dark:bg-gray-900">
@@ -39,11 +23,28 @@ const HomePage = () => {
           </p>
           
         </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <div className="lg:mt-0 lg:col-span-5 lg:flex max-md:flex-col">
           <img src={homeelectronics} alt="hero image" />
         </div>
       </div>
     </section>
+     <Carousel className="rounded-xl" transition={{ duration: 1 }}>
+        <img
+          src={e1}
+          alt = ""
+          className="h-full w-full object-cover"
+        />
+        <img
+          src={e2}
+          alt = ""
+          className="h-full w-full object-cover"
+        />
+        <img
+          src={e3}
+          alt = ""
+          className="h-full w-full object-cover"
+        />
+      </Carousel>
     </div>
   );
 };
