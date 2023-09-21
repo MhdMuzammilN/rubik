@@ -1,9 +1,7 @@
-import { Carousel } from "@material-tailwind/react";
-import e1 from "../assets/e1.jpg";
-import e2 from "../assets/e2.jpg";
-import e3 from "../assets/e3.jpg";
+
 import homeelectronics from "../assets/homeelectronics.jpg"
 import CustomerResponse from "../components/CustomerResponse";
+import CarousalElectronic from "../components/CarousalElectronic";
 
 const HomePage = () => {
   return (
@@ -246,23 +244,7 @@ const HomePage = () => {
         <div className="lg:mt-0 lg:col-span-5 lg:flex max-md:flex-col">
           <img src={homeelectronics} alt="hero image" />
         </div>
-        <Carousel className="rounded-xl" transition={{ duration: 1 }}>
-        <img
-          src={e1}
-          alt = ""
-          className="h-full w-full object-cover"
-        />
-        <img
-          src={e2}
-          alt = ""
-          className="h-full w-full object-cover"
-        />
-        <img
-          src={e3}
-          alt = ""
-          className="h-full w-full object-cover"
-        />
-      </Carousel>
+        <CarousalElectronic />
       </div>
       
   );
