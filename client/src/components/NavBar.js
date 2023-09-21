@@ -234,21 +234,21 @@ return (
               </Link>
             </li>
             <li className="mb-1">
-              <a
+              <Link
                 className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
+                to="/about"
               >
                 About Us
-              </a>
+              </Link>
             </li>
          
             <li className="mb-1">
-              <a
+              <Link
                 className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                href="#"
+                to="/contact"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
