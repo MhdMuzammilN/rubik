@@ -144,9 +144,9 @@ return (
           </svg>
         </li>
         <li>
-          <a className="text-sm text-blue-600 font-bold" href="#">
+          <Link className="text-sm text-blue-600 font-bold" to = "/aboutus">
             About Us
-          </a>
+          </Link>
         </li>
         
         <li className="text-gray-300">
@@ -236,7 +236,7 @@ return (
             <li className="mb-1">
               <Link
                 className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                to="/about"
+                to="/aboutus"
               >
                 About Us
               </Link>
