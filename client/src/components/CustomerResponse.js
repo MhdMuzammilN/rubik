@@ -1,7 +1,7 @@
-import customerservice from "../assets/homepageicons/customerservice.png"
-import brandtag from "../assets/homepageicons/brandtag.png"
-import fastdelivery from "../assets/homepageicons/fastdelivery.png"
-import technicianservice from "../assets/homepageicons/technicianservice.png"
+import customerservice from "../assets/homepageicons/customerservice.png";
+import brandtag from "../assets/homepageicons/brandtag.png";
+import fastdelivery from "../assets/homepageicons/fastdelivery.png";
+import technicianservice from "../assets/homepageicons/technicianservice.png";
 
 const CustomerResponse = () => {
   return (
@@ -9,13 +9,13 @@ const CustomerResponse = () => {
       <div class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6">
         <div class="col-span-2 mb-8">
           <p class="text-lg font-medium text-purple-600 dark:text-purple-500">
-          Rubik in our hood
+            Rubik in our hood
           </p>
           <h2 class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white">
             Trusted by many
           </h2>
           <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-          Your Electronics Lifeline: Quality Spare Parts and Expert Services
+            Your Electronics Lifeline: Quality Spare Parts and Expert Services
           </p>
           <div class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700">
             <div>
@@ -62,24 +62,31 @@ const CustomerResponse = () => {
         </div>
         <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
           <div>
-          <img src={customerservice} class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"/>
-            <h3 class="mb-2 text-2xl font-bold dark:text-white">
-              9am - 11pm
-            </h3>
+            <img
+              src={customerservice}
+              class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+            />
+            <h3 class="mb-2 text-2xl font-bold dark:text-white">9am - 11pm</h3>
             <p class="font-light text-gray-500 dark:text-gray-400">
-            We're open 7 days a week.
+              We're open 7 days a week.
             </p>
           </div>
           <div>
-            <img src={brandtag} class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"/>
-       
+            <img
+              src={brandtag}
+              class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+            />
+
             <h3 class="mb-2 text-2xl font-bold dark:text-white">Most brands</h3>
             <p class="font-light text-gray-500 dark:text-gray-400">
               We sell parts of almost all
             </p>
           </div>
           <div>
-          <img src={fastdelivery} class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"/>
+            <img
+              src={fastdelivery}
+              class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+            />
             <h3 class="mb-2 text-2xl font-bold dark:text-white">
               All India Delivery
             </h3>
@@ -88,8 +95,13 @@ const CustomerResponse = () => {
             </p>
           </div>
           <div>
-          <img src={technicianservice} class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"/>
-            <h3 class="mb-2 text-2xl font-bold dark:text-white">Seasoned Experts</h3>
+            <img
+              src={technicianservice}
+              class="w-10 h-10 mb-2 text-purple-600 md:w-12 md:h-12 dark:text-purple-500"
+            />
+            <h3 class="mb-2 text-2xl font-bold dark:text-white">
+              Seasoned Experts
+            </h3>
             <p class="font-light text-gray-500 dark:text-gray-400">
               Company trained technicians
             </p>
