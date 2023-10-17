@@ -319,7 +319,7 @@ const ServicePage = () => {
           {/* <div className="md:text-lg sm:max:text-sm sm:max:text-left" >We provide top-notch service for quality electronics devices... </div> */}
         </div>
 
-        <div className="overflow-auto p-10">
+        {/* <div className="overflow-auto p-10">
           <h3>Enter the details</h3>
           <div className="flex flex-col">
             <label for="cname" className="pt-3">
@@ -395,10 +395,10 @@ const ServicePage = () => {
               >
                 Submit
               </button>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
-      </div>
+      
     </>
   );
 };

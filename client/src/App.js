@@ -8,8 +8,9 @@ import NavBar from "./components/NavBar";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
-
+import background from "./assets/logo192.png"
 function App() {
+  
   return (
     <Router>
       <NavBar />
@@ -23,6 +24,7 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+
   );
 }
 
