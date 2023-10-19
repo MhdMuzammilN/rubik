@@ -103,7 +103,11 @@ const ServicePage = () => {
     console.log(problem);
     console.log(imageFile);
     //snd api should be written here4
+    let data = {"customer":customer, "phone":phone,"email":email,
+    "address":address,"brand":brand,"product":product,
+    "date":date,"problem":problem,"imageFile":imageFile}
 
+    
     //clearing everything from ui
     setCustomer("");
     setPhone("");
