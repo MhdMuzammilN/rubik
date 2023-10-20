@@ -1,8 +1,11 @@
 const express = require("express")
+const multer = require("multer")
 const bodyParser = require("body-parser")
 const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
+require('dotenv').config()
+
 
 //route paths
 const serviceRoute = require('./routes/service')
@@ -10,19 +13,24 @@ const serviceRoute = require('./routes/service')
 
 
 //middlewares
-app.use(bodyParser.json())
 app.use(cors());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
+
+//filestorage using multer
+const storage = multer.memoryStorage();
+const upload = multer({storage:storage});
 
 
 //routes
-app.use('/service',serviceRoute)
+app.use('/service',upload.single('imageFile'),serviceRoute)
 
 const serverAndDatabse = async ()=>{
 try{
-    await mongoose.connect('mongodb+srv://rubiksalesandservice:rubik123@cluster0.ro7enho.mongodb.net/?retryWrites=true&w=majority')
+    await mongoose.connect(process.env.MONGODB_URI)
     //server listening 
-    app.listen(4000,()=>{
+    app.listen(process.env.PORT,()=>{
     console.log("server started running on port 4000")
 })
 }catch(e){

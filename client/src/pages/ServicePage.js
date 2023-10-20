@@ -103,11 +103,42 @@ const ServicePage = () => {
     console.log(problem);
     console.log(imageFile);
     //snd api should be written here4
-    let data = {"customer":customer, "phone":phone,"email":email,
-    "address":address,"brand":brand,"product":product,
-    "date":date,"problem":problem,"imageFile":imageFile}
 
-    
+    // let data = {"customer":customer, "phone":phone,"email":email,
+    // "address":address,"brand":brand,"product":product,
+    // "date":date,"problem":problem,"imageFile":imageFile}
+
+    const sendData = async ()=>{
+      try{
+        const formData = new FormData();
+        formData.append('customer',customer);
+        formData.append('phone',phone);
+        formData.append('email',email);
+        formData.append('address',address);
+        formData.append('brand',brand);
+        formData.append('product',product);
+        formData.append('date',date);
+        formData.append('problem',problem);
+        formData.append('imageFile',imageFile);
+
+      const response = await fetch(
+        'http://localhost:4000/service/',
+        {
+          method:'POST',
+          mode: "cors",
+         body:formData  
+        }
+      );
+      
+      const responseData = await response.json();
+      console.log("response data ", responseData);
+      }
+      catch(e){
+        console.log("error is " + e);
+      }
+    }
+    sendData();
+
     //clearing everything from ui
     setCustomer("");
     setPhone("");
@@ -301,7 +332,7 @@ const ServicePage = () => {
                             />
                           </svg>
                           <div className="flex text-sm text-gray-600">
-                          <img src={imageFile} height="40px" width="40px"/>
+                          <img src={imageFile} height="40px" width="40px" alt="no Img"/>
                             <label
                               for="file-upload"
                               className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
@@ -309,11 +340,11 @@ const ServicePage = () => {
                               <span className="">Upload a file</span>
                               <input
                                 id="file-upload"
-                                name="file-upload"
+                                name="imageFile"
                                 type="file"
                                 className="sr-only"
                                 onChange={(e)=>{
-                                  setImageFile(URL.createObjectURL(e.target.files[0]))
+                                  setImageFile(e.target.files[0])
                                 }}
                               />
                               
