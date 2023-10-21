@@ -9,8 +9,7 @@ require('dotenv').config()
 
 //route paths
 const serviceRoute = require('./routes/service')
-
-
+const adminRoute = require('./routes/admin')
 
 //middlewares
 app.use(cors());
@@ -24,7 +23,10 @@ const upload = multer({storage:storage});
 
 
 //routes
-app.use('/service',upload.single('imageFile'),serviceRoute)
+app.use('/service',upload.single('imageFile'),serviceRoute);
+app.use('/admin',adminRoute);
+
+
 
 const serverAndDatabse = async ()=>{
 try{
